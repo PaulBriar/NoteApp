@@ -1,19 +1,23 @@
 console.log('Starting app.js');
 
 const fileSystem = require('fs');
-const os = require('os');
 const _ = require('lodash');
+
 const notes = require('./notes.js');
 
-var res = notes.add(1,2);
-console.log(res);
 
-console.log(`Result: ${notes.add(2,3)}`);
-
+const command = process.argv[2];
+console.log('Command: ', command);
 
 
-// fileSystem.appendFile('greetings.txt',`your number is ${res}`,  (err) =>    {
-//     if(err) {
-//         console.log('Error!');
-//     }
-// });
+if (command === 'add') {
+    console.log('Adding new note');
+} else if (command === 'list') {
+    console.log('Listing all notes') 
+} else if (command === 'read') {
+    console.log('Reading note');
+} else if (command === 'remove') {
+    console.log('Removed note');
+} else {
+    console.log('Command not recognized');
+}

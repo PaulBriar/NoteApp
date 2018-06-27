@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/PaulBriar/NoteApp#readme",
   "dependencies": {
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
   }
 }
