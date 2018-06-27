@@ -2,6 +2,7 @@ console.log('Starting app.js');
 
 const fileSystem = require('fs');
 const os = require('os');
+const _ = require('lodash');
 const notes = require('./notes.js');
 
 var res = notes.add(1,2);
