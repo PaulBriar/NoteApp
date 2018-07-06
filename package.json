@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Note App using NodeJS",
   "main": "app.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PaulBriar/NoteApp.git"
@@ -16,6 +15,7 @@
   },
   "homepage": "https://github.com/PaulBriar/NoteApp#readme",
   "dependencies": {
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "yargs": "^4.7.1"
   }
 }
