@@ -12,11 +12,22 @@ console.log('yargs', argv);
 
 
 if (command === 'add') {
-    notes.addNote(argv.title,argv.body);
+   var note = notes.addNote(argv.title,argv.body);
+   if(note) {
+       console.log(`Note Created: ${note.title} ${note.body}`);
+   } else {
+       console.log(argv.title + ' already exists');
+   }
 } else if (command === 'list') {
     notes.getAll();
 } else if (command === 'read') {
-    notes.getNote(argv.title);
+    var note = notes.getNote(argv.title);
+    debugger;
+    if (note) {
+        console.log(`Note Found: ${note.title} ${note.body}`);
+    } else {
+        console.log("Note not found");
+    };
 } else if (command === 'remove') {
     notes.remNote(argv.title);
 } else {
